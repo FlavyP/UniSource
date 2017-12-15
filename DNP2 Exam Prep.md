@@ -236,6 +236,7 @@ var p new {Name = "John", Age = 25 };
 - Anonymous type is a reference type;
 - All properties are **read only**;
 - Scope is local to the method where it is defined
+- Can be send as a parameter only if the method accepts a **dynamic type**;
 
 #### Lambda expressions
 #### Extension methods
