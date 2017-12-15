@@ -238,6 +238,8 @@ var p new {Name = "John", Age = 25 };
 - Scope is local to the method where it is defined
 - Can be send as a parameter only if the method accepts a **dynamic type**;
 
+[Source of a lot of information](http://www.tutorialsteacher.com/csharp/csharp-anonymous-type)
+
 #### Lambda expressions
 #### Extension methods
 #### LINQ
