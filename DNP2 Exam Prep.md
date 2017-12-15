@@ -88,6 +88,24 @@ var p new {Name = "John", Age = 25 };
 
 #### Lambda expressions
 #### Extension methods
+
+Extension methods provide syntactical sugar by allowing partial and shared implementation outside of a class, but enable the appearance a method belongs to a class. Extension methods are compiler tricks, allowing existing classes to be extended without relying on inheritance or having to change the source code, such as: **int, list** classes or even **sealed classes, like string**.
+
+- Can't be used to override existent methods;
+- Extension method with same name and signature will not be called over instance method;
+- Concept of extension methods **CAN'T** be applied to fields, properties or events;
+
+```
+public static class StringExtension {
+        public static int WordCount(this String str) {
+            return str.Split(new char[] { ' ', '.', '?', ','}, StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+    }
+```
+
+Resolution of an extension method is based on scope:
+- A *Sort()* method that extends `IEnumerable<T>` is visible on an array;
+- When using `List<T>`, since it has it's own *Sort()*, it's using the class implementation and **NOT** the extension method.
 #### LINQ
 #### WPF - Concept, XAML, Code Behind, Routed Evens
 #### MVVM
