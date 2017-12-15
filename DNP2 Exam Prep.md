@@ -106,6 +106,13 @@ public static class StringExtension {
 Resolution of an extension method is based on scope:
 - A *Sort()* method that extends `IEnumerable<T>` is visible on an array;
 - When using `List<T>`, since it has it's own *Sort()*, it's using the class implementation and **NOT** the extension method.
+
+Extension method considerations and practices:
+- Methods are not polymorphic, they are statically bound at compile time;
+- Extend as small a part of the class hierarchy as possible;
+- Use polymorphic/virtual base-class methods whenever possible;
+- Good canditates: operations over collections, utility functions and types to which we don't have code;
+
 #### LINQ
 #### WPF - Concept, XAML, Code Behind, Routed Evens
 #### MVVM
