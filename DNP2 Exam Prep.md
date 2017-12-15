@@ -112,6 +112,8 @@ Extension method considerations and practices:
 - Extend as small a part of the class hierarchy as possible;
 - Use polymorphic/virtual base-class methods whenever possible;
 - Good canditates: operations over collections, utility functions and types to which we don't have code;
+- The first parameter of an extension method must be of the type for which the method is appliable, preceded by the **this** keyword;
+- Extension methods can be used anywhere in the application by including the namespace of the extension method;
 
 #### LINQ
 #### WPF - Concept, XAML, Code Behind, Routed Evens
