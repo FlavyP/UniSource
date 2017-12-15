@@ -231,6 +231,12 @@ Anonymous Types. The compiler will generate a `__Anonymous1` class with the spec
 var p new {Name = "John", Age = 25 };
 ```
 
+- Anonymous type can be defined using the `new` keyword and object initializer syntax;
+- var (implicitly typed variable) is used to hold an anonymous type;
+- Anonymous type is a reference type;
+- All properties are **read only**;
+- Scope is local to the method where it is defined
+
 #### Lambda expressions
 #### Extension methods
 #### LINQ
