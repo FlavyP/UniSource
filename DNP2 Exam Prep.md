@@ -87,6 +87,90 @@ var p new {Name = "John", Age = 25 };
 [Source of a lot of information](http://www.tutorialsteacher.com/csharp/csharp-anonymous-type)
 
 #### Lambda expressions
+
+Introduced in C# 3.0 along with LINQ, being a shorter way to represent an anonymous method, using some special syntax.
+
+```
+s => s.Age > 12 && s.Age <20
+```
+
+- Lamdba expression can have multiple parameters
+
+```
+(s, youngAge) => s.Age >= youngAge;
+```
+
+- Can also give type to each parameters, if confusing:
+ 
+```
+(Student s, int youngAge) => s.Age >= youngAge;
+```
+
+- There are lamdba expression with no parameters
+
+```
+() => Console.WriteLine("Lamdba 0-param expression")
+```
+
+- Can have multiple statements in body expression of lambda:
+
+```
+(s, youngAge) => {
+    Console.WriteLine("Student {0}", s);
+    
+    Return s.Age >= youngAge;
+```
+
+- Can have a local variable in Lambda Expression:
+
+```
+s => {
+    int youngAge = 18;
+    return s.Age >= youngAge;
+}
+```
+
+- Can have lamdba as a Func Delegate. First params are input, last param is always the return type:
+
+```
+Func<Student, bool> isStudentTeenager = s => s.age > 12 && s.age < 20;
+
+Student std = new Student() { age = 21 };
+
+bool isTeen = isStudentTeenAger(std);
+```
+
+- Can have lambda as Action Delegate, which has no return type, can only have input parameters:
+
+```
+Action<Student> PrintStudentDetail = s => Console.WriteLine("Name: {0}, Age: {1} ", s.StudentName, s.Age);
+
+Student std = new Student(){ StudentName = "Bill", Age=21};
+
+PrintStudentDetail(std);
+```
+
+- Can also have lambda expression in LINQ query:
+
+```
+IList<Student> studentList = new List<Student>(){...};
+
+Func<Student, bool> isStudentTeenAger = s => s.age > 12 && s.age < 20;
+
+var teenStudents = studentList.Where(isStudentTeenAger).ToList<Student>();
+```
+
+**OR**
+
+```
+IList<Student> studentList = new List<Student>(){...};
+
+Func<Student, bool> isStudentTeenAger = s => s.age > 12 && s.age < 20;
+
+var teenStudents = from s in studentList
+                   where isStudentTeenAger(s)
+                   select s;
+```
 #### Extension methods
 
 Extension methods provide syntactical sugar by allowing partial and shared implementation outside of a class, but enable the appearance a method belongs to a class. Extension methods are compiler tricks, allowing existing classes to be extended without relying on inheritance or having to change the source code, such as: **int, list** classes or even **sealed classes, like string**.
