@@ -13,7 +13,7 @@
 - If null, delegate variable must not be call -> NullReferenceException;
 - Delegate variable stores method and its receiver, **no parameters**;
 
-```
+```sh
 public delegate void Notifier(string sender);
 
  private void SayGoodBye(string sender) {
@@ -27,7 +27,7 @@ greetings("John") // GoodBye from John
 - Delegate variables are first class objects -> can be stored in a data structure, passed as parameters etc.;
 - Can use *this* and be omitted, can be *static*, **NOT abstract**, can be *virtual, override, new*;
 
-```
+```sh
 var delList = new List<Notifier> { SayGoodBye, SayHello };
     foreach(var del in delList) {
         del("John");
@@ -57,7 +57,7 @@ Anonymous methods are inline un-named methods.
 - can be defined using the delegate keyword;
 - must be assigned to a delegate;
 
-```
+```sh
 Array.FindAll(integers, delegate(int value) { 
     return value % 2 == 0; 
 });
@@ -66,14 +66,14 @@ Array.FindAll(integers, delegate(int value) {
 - can access outer variables and functions;
 - can be passed as a parameter;
 - can be used as event handlers;
-```
+```sh
 saveButton.Click += delegate(Object o, EventArgs e) { 
     System.Windows.Forms.MessageBox.Show("Save Successfully!"); 
 };
 ```
 
 Anonymous Types. The compiler will generate a `__Anonymous1` class with the specified fields and p will have that type.
-```
+```sh
 var p new {Name = "John", Age = 25 };
 ```
 
@@ -90,31 +90,31 @@ var p new {Name = "John", Age = 25 };
 
 Introduced in C# 3.0 along with LINQ, being a shorter way to represent an anonymous method, using some special syntax.
 
-```
+```sh
 s => s.Age > 12 && s.Age <20
 ```
 
 - Lamdba expression can have multiple parameters
 
-```
+```sh
 (s, youngAge) => s.Age >= youngAge;
 ```
 
 - Can also give type to each parameters, if confusing:
  
-```
+```sh
 (Student s, int youngAge) => s.Age >= youngAge;
 ```
 
 - There are lamdba expression with no parameters
 
-```
+```sh
 () => Console.WriteLine("Lamdba 0-param expression")
 ```
 
 - Can have multiple statements in body expression of lambda:
 
-```
+```sh
 (s, youngAge) => {
     Console.WriteLine("Student {0}", s);
     
@@ -123,7 +123,7 @@ s => s.Age > 12 && s.Age <20
 
 - Can have a local variable in Lambda Expression:
 
-```
+```sh
 s => {
     int youngAge = 18;
     return s.Age >= youngAge;
@@ -132,7 +132,7 @@ s => {
 
 - Can have lamdba as a Func Delegate. First params are input, last param is always the return type:
 
-```
+```sh
 Func<Student, bool> isStudentTeenager = s => s.age > 12 && s.age < 20;
 
 Student std = new Student() { age = 21 };
@@ -142,7 +142,7 @@ bool isTeen = isStudentTeenAger(std);
 
 - Can have lambda as Action Delegate, which has no return type, can only have input parameters:
 
-```
+```sh
 Action<Student> PrintStudentDetail = s => Console.WriteLine("Name: {0}, Age: {1} ", s.StudentName, s.Age);
 
 Student std = new Student(){ StudentName = "Bill", Age=21};
@@ -152,7 +152,7 @@ PrintStudentDetail(std);
 
 - Can also have lambda expression in LINQ query:
 
-```
+```sh
 IList<Student> studentList = new List<Student>(){...};
 
 Func<Student, bool> isStudentTeenAger = s => s.age > 12 && s.age < 20;
@@ -162,7 +162,7 @@ var teenStudents = studentList.Where(isStudentTeenAger).ToList<Student>();
 
 **OR**
 
-```
+```sh
 IList<Student> studentList = new List<Student>(){...};
 
 Func<Student, bool> isStudentTeenAger = s => s.age > 12 && s.age < 20;
@@ -179,7 +179,7 @@ Extension methods provide syntactical sugar by allowing partial and shared imple
 - Extension method with same name and signature will not be called over instance method;
 - Concept of extension methods **CAN'T** be applied to fields, properties or events;
 
-```
+```sh
 public static class StringExtension {
         public static int WordCount(this String str) {
             return str.Split(new char[] { ' ', '.', '?', ','}, StringSplitOptions.RemoveEmptyEntries).Length;
@@ -218,7 +218,7 @@ Example - C# 2.0 had to loop a collection to get certain objects. Now we can "se
 - Can be used with query expressions and lamdba/extension methods;
 
 
-```
+```sh
 var CommonWords = 
     from w in wordOccurances
     where w.Count > 2
@@ -227,7 +227,7 @@ var CommonWords =
 
 **OR**
 
-```
+```sh
 var CommonWords = 
     wordOccurances.
     Where(w => w.Count > 2).
@@ -255,10 +255,10 @@ var CommonWords =
 - SelectMany;
 - Sum;
 - ToDictionary / ToList / Union; 
-- 
+
 **Walkthrough:**
 
-```
+```sh
 IEnumerable<int> passingScores = from score in scores
 where score >= 60
 select score;
@@ -266,13 +266,13 @@ select score;
 
 **is transformed by the compiler into:**
 
-```
+```sh
 IEnumerable<int> passingScores = scores.Where((int score) >= 60);
 ```
 
 **Then to delegate and method:**
 
-```
+```sh
 Func<int, bool> test = delegate(int score) { return score >= 60; };
 IEnumerable<int> passingScores = scores.Where(test);
 ```
