@@ -200,6 +200,84 @@ Extension method considerations and practices:
 - Extension methods can be used anywhere in the application by including the namespace of the extension method;
 
 #### LINQ
+
+Language-Integrated Query (LINQ) - powerful query language introduced with .NET 3.5, used to retrieve data from different sources. It eliminates the mismatch between programming languages and databases, providing a single querying interface for different types of data sources.
+
+SQL - used to CRUD data from a database;
+LINQ - used to CRUD data from different types of data sources like Object Collection, SQL server database, XML, web services;
+
+Example - C# 2.0 had to loop a collection to get certain objects. Now we can "select where";
+
+**Advantages of LINQ:**
+
+- Familiar Language: don't have to learn a new query language for each type of data;
+- Less coding: reduces the amount of code written compared to traditional approaches;
+- Readable code: LINQ makes code readable for other developers, easy to understand and maintain;
+- Compile time safety - provides type checking of objects at compile time;
+- Shaping data - can retireve data in different shapes (can select only 2 properties of an object with more);
+- Can be used with query expressions and lamdba/extension methods;
+
+
+```
+var CommonWords = 
+    from w in wordOccurances
+    where w.Count > 2
+    select new {w.Word, w.Count};
+```
+
+**OR**
+
+```
+var CommonWords = 
+    wordOccurances.
+    Where(w => w.Count > 2).
+    Select(w => new {w.Word, w.Count});
+```
+
+**LINQ different cool methods to use:**
+
+- Aggregate;
+- Average;
+- Cast;
+- Contains;
+- Count;
+- Distinct;
+- Except;
+- First;
+- GroupB;
+- Join;
+- Last;
+- Min / Max;
+- OfType;
+- OrderBy / OrderByDescending;
+- Range;
+- Reserve;
+- SelectMany;
+- Sum;
+- ToDictionary / ToList / Union; 
+- 
+**Walkthrough:**
+
+```
+IEnumerable<int> passingScores = from score in scores
+where score >= 60
+select score;
+```
+
+**is transformed by the compiler into:**
+
+```
+IEnumerable<int> passingScores = scores.Where((int score) >= 60);
+```
+
+**Then to delegate and method:**
+
+```
+Func<int, bool> test = delegate(int score) { return score >= 60; };
+IEnumerable<int> passingScores = scores.Where(test);
+```
+
+
 #### WPF - Concept, XAML, Code Behind, Routed Evens
 #### MVVM
 #### Async - Concept, await, async
