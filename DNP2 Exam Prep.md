@@ -48,9 +48,10 @@ int[] evenIntegers = Array.FindAll(integers, isEven);
 evenIntegers.ToList().ForEach(Console.WriteLine);
 ```
 
-#### Interfaces - Idisposable interface
-#### Inheritance
-#### Generics
+<span style="color:blue">#### Interfaces - Idisposable interface</span>
+<span style="color:blue">#### Inheritance</span>
+<span style="color:blue">#### Generics</span>
+
 #### Anonymous Types and Methods
 
 Anonymous methods are inline un-named methods.
