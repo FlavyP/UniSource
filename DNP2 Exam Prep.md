@@ -7,7 +7,7 @@
 
 ## Explanations, examples and code for
 
-#### Delegates
+### Delegates
 
 - A delegate variable can have the value null (no method assigned);
 - If null, delegate variable must not be call -> NullReferenceException;
@@ -48,11 +48,11 @@ int[] evenIntegers = Array.FindAll(integers, isEven);
 evenIntegers.ToList().ForEach(Console.WriteLine);
 ```
 
-#### [NEEDS WORK]() Interfaces - Idisposable interface
-#### [NEEDS WORK]() Inheritance
-#### [NEEDS WORK]() Generics
+### [NEEDS WORK]() Interfaces - Idisposable interface
+### [NEEDS WORK]() Inheritance
+### [NEEDS WORK]() Generics
 
-#### Anonymous Types and Methods
+### Anonymous Types and Methods
 
 Anonymous methods are inline un-named methods.
 - can be defined using the delegate keyword;
@@ -87,7 +87,7 @@ var p new {Name = "John", Age = 25 };
 
 [Source of a lot of information](http://www.tutorialsteacher.com/csharp/csharp-anonymous-type)
 
-#### Lambda expressions
+### Lambda expressions
 
 Introduced in C# 3.0 along with LINQ, being a shorter way to represent an anonymous method, using some special syntax.
 
@@ -172,7 +172,7 @@ var teenStudents = from s in studentList
                    where isStudentTeenAger(s)
                    select s;
 ```
-#### Extension methods
+### Extension methods
 
 Extension methods provide syntactical sugar by allowing partial and shared implementation outside of a class, but enable the appearance a method belongs to a class. Extension methods are compiler tricks, allowing existing classes to be extended without relying on inheritance or having to change the source code, such as: **int, list** classes or even **sealed classes, like string**.
 
@@ -200,7 +200,7 @@ Extension method considerations and practices:
 - The first parameter of an extension method must be of the type for which the method is appliable, preceded by the **this** keyword;
 - Extension methods can be used anywhere in the application by including the namespace of the extension method;
 
-#### LINQ
+### LINQ
 
 Language-Integrated Query (LINQ) - powerful query language introduced with .NET 3.5, used to retrieve data from different sources. It eliminates the mismatch between programming languages and databases, providing a single querying interface for different types of data sources.
 
@@ -279,9 +279,9 @@ IEnumerable<int> passingScores = scores.Where(test);
 ```
 
 
-#### WPF - Concept, XAML, Code Behind, Routed Evens
-#### MVVM
-#### Async - Concept, await, async
+### [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Evens
+### [NEEDS WORK]() MVVM
+### Async - Concept, await, async
 
 **Why Async?**
 - Responsiveness in applications;
@@ -382,4 +382,4 @@ async static void DoStuff() {
 **Working with images** - MediaCapture, BitmapEncoder, BitmapDecoder;
 **WCF programming** - Synchronous and Asynchronous Operations;
  
-#### WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
+### WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
