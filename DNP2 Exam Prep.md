@@ -333,4 +333,52 @@ static void Callback( IAsyncResult iar ) {
   }
  }
 ```
+**C# 5.0 await operator**
+ 
+ - **await** keyword for methods returning **Task** or **Task<T>**
+ - Yields control to calling thread until awaited task completes;
+ - Results gets returned;
+ - Allows you to program just like synchronous programming;
+ - When Task is awaited, the thread will **NOT** be blocked;
+ - Result of a Task<T> is the generic argument and is returned when awaiting;
+ - Complex control flow under the hood made stunningly simple by compiler;
+
+**Compiler interpretation** - Whenever a Task is awaited, the awaiting thread will return from the method, so it can do other things, and come back to the method when the Task is completed!
+
+```sh
+WebClient client = new WebClient();
+String result = await client.DownloadStringTaskAsync(...);
+```
+
+**C# 5.0 async Modifier**
+
+- Marks method or lamdba asyncrhonous;
+- Methods making use of **await** must be marked **async**;
+- Can easily define own async methods;
+- Async methods can return **void, Task or Task<T>**;
+ 
+**Compiler interpretation** - An async method will be split up by the compiler whenever the await keyword is used, so the calling thread will actually return from the method before it reaches the end.
+
+```sh
+async static void DoStuff() {
+ string result = await client.DownloadStringTaskAsync(...);
+}
+```
+
+**Static Task Utilit Methods:**
+
+- **Task.Run()** - creates a task from a delegate that runs on the ThreadPool;
+- **Task.Delay()** - creates a task that completes after a timespan;
+- **Task.WhenAll()** - creates a task that completes when all supplied tasks are completed;
+- **Task.WhenAny()** - creates a task that completes when any of the supplied tasks completes;
+- **Task.WaitAll()** - blocks the current thread until all of the supplied tasks are completed;
+- **Task.WaitAny()** - blocks the current thread until any of the supplied tasks are completed;
+ 
+**Async Improves Responsiveness:**
+
+**Web Access** - HttpClient, SyndicationClient;
+**Working with files** - StorageFile, StreamWriter, StreamReader, XmlReader;
+**Working with images** - MediaCapture, BitmapEncoder, BitmapDecoder;
+**WCF programming** - Synchronous and Asynchronous Operations;
+ 
 #### WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
