@@ -48,9 +48,9 @@ int[] evenIntegers = Array.FindAll(integers, isEven);
 evenIntegers.ToList().ForEach(Console.WriteLine);
 ```
 
-<span style="color:blue">#### Interfaces - Idisposable interface</span>
-<span style="color:blue">#### Inheritance</span>
-<span style="color:blue">#### Generics</span>
+#### [NEEDS WORK]() Interfaces - Idisposable interface
+#### [NEEDS WORK]() Inheritance
+#### [NEEDS WORK]() Generics
 
 #### Anonymous Types and Methods
 
