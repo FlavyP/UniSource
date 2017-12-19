@@ -281,4 +281,56 @@ IEnumerable<int> passingScores = scores.Where(test);
 #### WPF - Concept, XAML, Code Behind, Routed Evens
 #### MVVM
 #### Async - Concept, await, async
+
+**Why Async?**
+- Responsiveness in applications;
+- Avoid blocking threads;
+- Paralellism;
+
+**Async in C# 4.0:**
+
+Callback based programming - method for kicking off work I/O or CPU bound work on a background thread. Events or delegates used to handle completion and progress;
+
+```sh
+static void TraditionalAPM() {
+ HttpWebRequest request = WebRequest.Create (url) as HttpWebRequest;
+ request.BeginGetResponse( Callback, request);
+}
+
+static void Callback( IAsyncResult iar ) {
+ HttpWebRequest request = iar.AsyncState as HttpWebRequest;
+ HttpWebResponse response = request.EndGetResponse(iar) as HttpWebRequest;
+}
+```
+
+*Problems:*
+- Async programming is much harder than synchronous programming;
+- Programming concepts not usable, such as try-catch, for loop etc;
+- Uncertainty of location, which thread at what time - UI thread, Background thread?;
+
+**Async in C# 5.0:**
+
+*Goals:*
+- No more callbacks;
+- Compiler handles the hard work using new keywords provided in C# 5.0;
+- No more worrying about threading;
+- Can always return to the same thread you left off on;
+
+**TaskParallel Library (TPL) introduced in .NET 4.0, enhanced in .NET 4.5 with special keywords included in C3 5.0**
+
+**Task class:**
+- Captures a unit of computation;
+- Task<T> captures a unit of computation that returns T;
+- Running tasks can be requested cancelled;
+ - Signal token created by CancellationTokenSource class;
+ - Other code signal token supplied to task;
+- Task method checks if cancellation is requested. Throws OperationCanceledException to accept cancellation;
+- Can check status via Task.Status;
+```sh
+ task = Task.Run( () => {
+  if( token.IsCancellationRequested) {
+   throw new OperationCanceledException( token );
+  }
+ }
+```
 #### WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
