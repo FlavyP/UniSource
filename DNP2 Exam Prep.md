@@ -382,4 +382,4 @@ async static void DoStuff() {
 **Working with images** - MediaCapture, BitmapEncoder, BitmapDecoder;
 **WCF programming** - Synchronous and Asynchronous Operations;
  
-### WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
+### [NEEDS WORK]() WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
