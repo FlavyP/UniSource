@@ -52,6 +52,54 @@ evenIntegers.ToList().ForEach(Console.WriteLine);
 ### [NEEDS WORK]() Inheritance
 ### [NEEDS WORK]() Generics
 
+Introduced in C# 2.0, they allow us to define a class with placeholders for the type of its fields, methods, parameters, etc. Generics replace these placeholders with some specific type at compile time.
+
+Generic class can be defined using **angle brackets <>**:
+
+```sh
+class MyGenericClass<T>
+{
+    private T genericMemberVariable;
+
+    public MyGenericClass(T value)
+    {
+        genericMemberVariable = value;
+    }
+
+    public T genericMethod(T genericParameter)
+    {
+        Console.WriteLine("Parameter type: {0}, value: {1}", typeof(T).ToString(),genericParameter);
+        Console.WriteLine("Return type: {0}, value: {1}", typeof(T).ToString(), genericMemberVariable);
+            
+        return genericMemberVariable;
+    }
+
+    public T genericProperty { get; set; }
+}
+```
+
+Class is defined with **<T>**. **<>** indicates that class is generic and underlying type would be defined later, for now consider it as *T*. The compiler assigns the type based on the type passed by the caller when instantiating a class. Example:
+ 
+ ```sh
+ MyGenericClass<int> intGenericClass = new MyGenericClass<int>(10);
+
+int val = intGenericClass.genericMethod(200);
+
+//Parameter type: int, value: 200 
+//Return type: int, value: 10
+
+**WITH STRING:**
+
+MyGenericClass<string> strGenericClass = new MyGenericClass<string>("Hello Generic World");
+
+strGenericClass.genericProperty = "This is a generic property example.";
+string result = strGenericClass.genericMethod("Generic Parameter");
+
+//Parameter type: string, value: Generic Parameter 
+//Return type: string, value: Hello Generic World
+ ```
+ **Generic base class:**
+ 
 ### Anonymous Types and Methods
 
 Anonymous methods are inline un-named methods.
