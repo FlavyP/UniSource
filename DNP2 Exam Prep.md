@@ -49,8 +49,10 @@ evenIntegers.ToList().ForEach(Console.WriteLine);
 ```
 
 ### [NEEDS WORK]() Interfaces - Idisposable interface
+
+Interface in C# contains the declaration of the methods, properties and events.
 ### [NEEDS WORK]() Inheritance
-### [NEEDS WORK]() Generics
+### Generics
 
 Introduced in C# 2.0, they allow us to define a class with placeholders for the type of its fields, methods, parameters, etc. Generics replace these placeholders with some specific type at compile time.
 
