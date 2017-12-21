@@ -196,6 +196,28 @@ MyGenericClass<Student> stdGenericClass = new MyGenericClass<Student>(new Studen
 |where T : base class name|Type must be or derive from the specified base class|
 |where T : interface name|Type must be or implement the specified interface|
 |where T : U|Type supplied for T must be or derive from the argument supplied for U|
+
+**Multiple constraints** - generic class can have multiple constraints:
+
+```sh
+class MyGenericClass<T, U> where T: class where U:struct
+```
+
+**Constraint on generic methods:**
+- Constraints specifies the kind of types allowed with the generics;
+- Constraints can be applied using the **where** keyword;
+- Six types of constraints: class, struct, new(), base class name, interface and derived type;
+- Multiple constraints also can be applied;
+```sh
+class MyGenericClass<T> where T: class {
+    public T genericMethod<U>(T genericParameter, U anotherGenericType) where U: struct {
+        Console.WriteLine("Generic Parameter of type {0}, value {1}", typeof(T).ToString(),genericParameter);
+        Console.WriteLine("Return value of type {0}, value {1}", typeof(T).ToString(), genericMemberVariable);
+            
+        return genericMemberVariable;
+    }        
+}
+```
  
 ### Anonymous Types and Methods
 
