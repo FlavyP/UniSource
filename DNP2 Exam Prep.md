@@ -100,6 +100,32 @@ string result = strGenericClass.genericMethod("Generic Parameter");
  ```
  **Generic base class:**
  
+ When deriving from a generic base class, you must provide a type argument instead of the base-class's generic type parameter:
+ 
+ ```sh
+ class MyDerivedClass : MyGenericClass<string>
+ ```
+ 
+ If you want to the derived class to be generic then no need to specify type for the generic base class:
+ 
+ ```sh
+ class MyDerivedClass<U> : MyGenericClass<U>
+ ```
+ 
+ If the generic base class has contraints, derived class must use the same constraints:
+ 
+ ```sh
+ class MyGeneric Class<T> where T: class
+ 
+ ...
+ 
+ class MyDerivedClass<U> : MyGenericClass<U> where U:class
+ ```
+ 
+ **Generic Delegates:**
+ 
+ 
+ 
 ### Anonymous Types and Methods
 
 Anonymous methods are inline un-named methods.
