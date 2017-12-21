@@ -193,8 +193,8 @@ MyGenericClass<Student> stdGenericClass = new MyGenericClass<Student>(new Studen
 |where T : class|Type must be reference type|
 |where T : struct|Type must be value type|
 |where T : new()|Type must have public parameterless constructor|
-|where T : <base class name>|Type must be or derive from the specified base class|
-|where T : <interface name>|Type must be or implement the specified interface|
+|where T : base class name|Type must be or derive from the specified base class|
+|where T : interface name|Type must be or implement the specified interface|
 |where T : U|Type supplied for T must be or derive from the argument supplied for U|
  
 ### Anonymous Types and Methods
