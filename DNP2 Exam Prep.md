@@ -124,7 +124,78 @@ string result = strGenericClass.genericMethod("Generic Parameter");
  
  **Generic Delegates:**
  
+ A generic delegate can be defined the same way as delegate but with genric type.
  
+ ```sh
+ class Program {
+  public delegate T add<T>(T param1, T param2);
+  
+  static void Main(string[] args) {
+      add<int> sum = AddNumber;
+      
+      Console.WriteLine(sum(10,20)); //30
+      
+      add<string> conct = Concate;
+      
+      Console.WriteLine(conct("Hello", "World!!")); // Hello World!!
+      
+      public static int AddNumber(int val1, int val2) {
+        return val1 + val2;
+    }
+
+    public static string Concate(string str1, string str2) {
+        return str1 + str2;
+    }
+}
+```
+
+Add delegate is generic. In Main, it has defined add delegate of int type variable sum. It points to AddNumber() which has int types parameters. Another variable of add delegate uses string type, so it can point to Concate method. You can use generic delegates for diferent methods of different types of parameters.
+
+Generics can be applied to the following:
+
+- Interface;
+- Abstract class;
+- Class;
+- Method;
+- Static method;
+- Property;
+- Event;
+- Delegates;
+- Operator;
+
+**Advantages of Generics:**
+
+- Increases the reusability of code;
+- Type safety. You get compile errors if you try to use a different type of data than the one specified in the definition;
+- Performance advantage because it removes the possibilities of boxing and unboxing;
+- Compiler applys specified type for generics at compile time;
+
+**Constraints in Generics:**
+ 
+ C# includes Contraints to specify which type of placeholder type with the generic class is allowed. It will give a compile time error if you try to instantiate a generic class suing a placeholder type that is now allowed by a constraint. If the generic constraints specifies that only reference type can be used with the generic class, then you cannot use value type to create an object of generic type.
+ 
+ Constraints can be applied using the **where** keyword. In the following example, MyGenericClass specifies constraints that only a reference type can be used with MyGenericClass. This means that only a class can be a placeholder type, not the primitive types, struct, etc.
+ 
+```sh
+class MyGenericClass<T> where T: class
+```
+
+Now, we cannot use int as a placeholder type, since it will give a compile time error. String ro any class type is valid because it is a reference type.
+
+```sh
+MyGenericClass<int> intGenericClass = new MyGenericClass<int>(10); //ERROR
+MyGenericClass<string> strGenericClass = new MyGenericClass<string>("Hello World");
+MyGenericClass<Student> stdGenericClass = new MyGenericClass<Student>(new Student());
+```
+
+| Constraint  |Description|
+|---|---|
+|where T : class|Type must be reference type|
+|where T : struct|Type must be value type|
+|where T : new()|Type must have public parameterless constructor|
+|where T : <base class name>|Type must be or derive from the specified base class|
+|where T : <interface name>|Type must be or implement the specified interface|
+|where T : U|Type supplied for T must be or derive from the argument supplied for U|
  
 ### Anonymous Types and Methods
 
