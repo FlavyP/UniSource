@@ -8,7 +8,7 @@
 # Checklist
 
 - [x] Delegates
-- [ ] Interfaces, Idisposable interface
+- [x] Interfaces, Idisposable interface
 - [ ] Inheritance
 - [x] Generics
 - [x] Anonymous Types and Methods
@@ -64,7 +64,7 @@ evenIntegers.ToList().ForEach(Console.WriteLine);
 
 ### Interfaces - Idisposable interface
 
-Interface in C# contains the declaration of the methods, properties and events. Like abstract classes, they share the fact that no instances of them can be created. Also, no bodies are allowed as well. Consider an interface like a contract - class that implements it is required to implement all of the methods and properties.
+Interface in C# contains the declaration of the methods, properties and events. Like abstract classes, they share the fact that no instances of them can be created. Also, no bodies are allowed as well. Consider an interface like a contract - class that implements it is required to implement all of the methods and properties. All members of an interface are public.
 
 C# does **NOT** allow multiple inheritance, it **DOES** allow for multiple interfaces implementations. Has to use the keyword **interface** and it's a coding standard to use *I* in front of the name: **IAnimal**. Makes it easier for programmers to see that it's an interface without looking at the class definition.
 
@@ -82,6 +82,18 @@ C# does **NOT** allow multiple inheritance, it **DOES** allow for multiple inter
 ```
 
 **IDisposable** - primary use of this interface is to clean up unmanaged resources, such as database connections.
+
+**Explicit interfaces** - used when a class implements multiple interfaces or if the interfaces share the same method. 
+
+```sh
+class ConsoleLog: ILog
+{
+    public void ILog.Log(string msgToPrint) // explicit implementation
+    {
+        Console.WriteLine(msgToPrint);
+    }
+}
+```
 
 ### [NEEDS WORK]() Inheritance
 ### Generics
