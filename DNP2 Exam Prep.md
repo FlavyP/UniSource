@@ -523,7 +523,20 @@ IEnumerable<int> passingScores = scores.Where(test);
 
 
 ### [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Events
-### [NEEDS WORK]() MVVM
+### [NEEDS WORK]() MVVM (Model-View-ViewModel)
+
+Design pattern used to delimitate application layers and structure your code to write maintainable, testable and extensible applications.
+
+**Model** − It simply holds the data and has nothing to do with any of the business logic. Represents the underlying data structures used in the applcation. Can represent a connection to an external source.
+
+**ViewModel** − It acts as the link/connection between the Model and View and makes stuff look pretty. Used to prepare the data for the views. Aggregation of different classes (other ViewModels) a view can bind to.
+
+**View** − It simply holds the formatted data and essentially delegates everything to the Model. Mostly XAML code that defines how the view looks and how the user interacts with it. View elements bind to Properties in the ViewModel.
+
+
+
+
+
 ### Async - Concept, await, async
 
 **Why Async?**
