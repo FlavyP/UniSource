@@ -20,9 +20,7 @@
 - [ ] MVVM
 - [x] Async - Concept, await, async
 
-## Explanations, examples and code for
-
-### Delegates
+## Delegates
 
 - A delegate variable can have the value null (no method assigned);
 - If null, delegate variable must not be call -> NullReferenceException;
@@ -63,7 +61,7 @@ int[] evenIntegers = Array.FindAll(integers, isEven);
 evenIntegers.ToList().ForEach(Console.WriteLine);
 ```
 
-### Interfaces - Idisposable interface
+## Interfaces - Idisposable interface
 
 Interface in C# contains the declaration of the methods, properties and events. Like abstract classes, they share the fact that no instances of them can be created. Also, no bodies are allowed as well. Consider an interface like a contract - class that implements it is required to implement all of the methods and properties. All members of an interface are public.
 
@@ -96,7 +94,7 @@ class ConsoleLog: ILog
 }
 ```
 
-### Inheritance
+## Inheritance
 
 Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application. This also provides an opportunity to reuse the code functionality and speeds up implementation time.
 
@@ -126,7 +124,7 @@ The idea of inheritance implements the **IS-A relationship**. For example, mamma
 
 **Initializing Base Class** - The derived class inherits the base class member variables and member methods. Therefore the super class object should be created before the subclass is created. You can give instructions for superclass initialization in the member initialization list.
 
-### Generics
+## Generics
 
 Introduced in C# 2.0, they allow us to define a class with placeholders for the type of its fields, methods, parameters, etc. Generics replace these placeholders with some specific type at compile time.
 
@@ -295,7 +293,7 @@ class MyGenericClass<T> where T: class {
 }
 ```
  
-### Anonymous Types and Methods
+## Anonymous Types and Methods
 
 Anonymous methods are inline un-named methods.
 - can be defined using the delegate keyword;
@@ -330,7 +328,7 @@ var p new {Name = "John", Age = 25 };
 
 [Source of a lot of information](http://www.tutorialsteacher.com/csharp/csharp-anonymous-type)
 
-### Lambda expressions
+## Lambda expressions
 
 Introduced in C# 3.0 along with LINQ, being a shorter way to represent an anonymous method, using some special syntax.
 
@@ -415,7 +413,7 @@ var teenStudents = from s in studentList
                    where isStudentTeenAger(s)
                    select s;
 ```
-### Extension methods
+## Extension methods
 
 Extension methods provide syntactical sugar by allowing partial and shared implementation outside of a class, but enable the appearance a method belongs to a class. Extension methods are compiler tricks, allowing existing classes to be extended without relying on inheritance or having to change the source code, such as: **int, list** classes or even **sealed classes, like string**.
 
@@ -443,7 +441,7 @@ Extension method considerations and practices:
 - The first parameter of an extension method must be of the type for which the method is appliable, preceded by the **this** keyword;
 - Extension methods can be used anywhere in the application by including the namespace of the extension method;
 
-### LINQ
+## LINQ
 
 Language-Integrated Query (LINQ) - powerful query language introduced with .NET 3.5, used to retrieve data from different sources. It eliminates the mismatch between programming languages and databases, providing a single querying interface for different types of data sources.
 
@@ -522,8 +520,8 @@ IEnumerable<int> passingScores = scores.Where(test);
 ```
 
 
-### [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Events
-### [NEEDS WORK]() MVVM (Model-View-ViewModel)
+## [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Events
+## [NEEDS WORK]() MVVM (Model-View-ViewModel)
 
 Design pattern used to delimitate application layers and structure your code to write maintainable, testable and extensible applications.
 
@@ -570,7 +568,7 @@ The obvious purpose of MVVM pattern is abstraction of the View which reduces the
 - Similar in bigger cases, can be hard to design the ViewModel;
 - Debugging would be bit difficult when we have complex data bindings;
 
-### Async - Concept, await, async
+## Async - Concept, await, async
 
 **Why Async?**
 - Responsiveness in applications;
@@ -671,4 +669,4 @@ async static void DoStuff() {
 **Working with images** - MediaCapture, BitmapEncoder, BitmapDecoder;
 **WCF programming** - Synchronous and Asynchronous Operations;
  
-### [NEEDS WORK]() WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
+## [NEEDS WORK]() WCF - Concept, ABC of Endpoints, Service/implementation, hosting, channels
