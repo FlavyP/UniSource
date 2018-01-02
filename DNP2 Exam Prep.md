@@ -521,7 +521,7 @@ IEnumerable<int> passingScores = scores.Where(test);
 
 
 ## [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Events
-## [NEEDS WORK]() MVVM (Model-View-ViewModel)
+## MVVM (Model-View-ViewModel)
 
 Design pattern used to delimitate application layers and structure your code to write maintainable, testable and extensible applications.
 The key benefit is allowing true separation between the View and Model beyond achieving separation and the efficiency that you gain from having that. What that means in real terms is that when your model needs to change, it can be changed easily without the view needing to and vice-versa.
