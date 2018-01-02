@@ -533,9 +533,42 @@ Design pattern used to delimitate application layers and structure your code to 
 
 **View** − It simply holds the formatted data and essentially delegates everything to the Model. Mostly XAML code that defines how the view looks and how the user interacts with it. View elements bind to Properties in the ViewModel.
 
+The key benefit is allowing true separation between the View and Model beyond achieving separation and the efficiency that you gain from having that. What that means in real terms is that when your model needs to change, it can be changed easily without the view needing to and vice-versa.
 
+**Maintainability**
 
+- A clean separation of different kinds of code should make it easier to go into one or several of those more granular and focused parts and make changes without worrying;
+- Means you can remain agile and keep moving out to new releases quickly;
 
+**Testability**
+
+- With MVVM, each piece of code is more granular and if it is implemented right your external and internal depedencies are in separate pieces of code from the parts with the core logic that you would like to test;
+- Makes it a lot easier to write unit tests against a core logic;
+- Make sure it works right when written and keeps working even when things change in maintenance;
+
+**Extensibility**
+
+- It sometimes overlaps with maintainability, because of the clean separation boundaries and more granular pieces of code;
+- You have a better chance of making any of those parts more reusable;
+- It has also the ability to replace or add new pieces of code that do similar things into the right places in the architecture;
+
+The obvious purpose of MVVM pattern is abstraction of the View which reduces the amount of business logic in code-behind. However, following are some other solid advantages:
+
+- ViewModel is easier to unit test than code-behind or event-driven code;
+- You can test it without awkward UI automation and interaction;
+- The presentation layer and the logic is loosely coupled;
+- The View can be switched - therefore the naming conventions in the ViewModel are important;
+- The model can be switched (could interface with different service technologies such as WCF, SOAP or databases)
+- Clear delimitation of the application layers;
+- Reusability;
+- Components can be developed independently (by different vendors);
+- Isolated unit testing;
+
+**Disadvantages**
+
+- For simple UIs, MVVM might be overkill;
+- Similar in bigger cases, can be hard to design the ViewModel;
+- Debugging would be bit difficult when we have complex data bindings;
 
 ### Async - Concept, await, async
 
