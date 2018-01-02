@@ -62,9 +62,27 @@ int[] evenIntegers = Array.FindAll(integers, isEven);
 evenIntegers.ToList().ForEach(Console.WriteLine);
 ```
 
-### [NEEDS WORK]() Interfaces - Idisposable interface
+### Interfaces - Idisposable interface
 
-Interface in C# contains the declaration of the methods, properties and events.
+Interface in C# contains the declaration of the methods, properties and events. Like abstract classes, they share the fact that no instances of them can be created. Also, no bodies are allowed as well. Consider an interface like a contract - class that implements it is required to implement all of the methods and properties.
+
+C# does **NOT** allow multiple inheritance, it **DOES** allow for multiple interfaces implementations. Has to use the keyword **interface** and it's a coding standard to use *I* in front of the name: **IAnimal**. Makes it easier for programmers to see that it's an interface without looking at the class definition.
+
+```sh
+ interface IAnimal
+    {
+        string Describe();
+
+        string Name
+        {
+            get;
+            set;
+        }
+    }
+```
+
+**IDisposable** - primary use of this interface is to clean up unmanaged resources, such as database connections.
+
 ### [NEEDS WORK]() Inheritance
 ### Generics
 
