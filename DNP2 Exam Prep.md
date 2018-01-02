@@ -5,6 +5,20 @@
 - Add useful comments
 - Write execises for each topic with comments for exam
 
+# Checklist
+
+- [x] Delegates
+- [ ] Interfaces, Idisposable interface
+- [ ] Inheritance
+- [x] Generics
+- [x] Anonymous Types and Methods
+- [x] Lambda expressions
+- [x] Extension Methods
+- [x] LINQ
+- [ ] WPF - Concept, XAML, Code Behind, Routed Events
+- [ ] MVVM
+- [x] Async - Concept, await, async
+
 ## Explanations, examples and code for
 
 ### Delegates
@@ -448,7 +462,7 @@ IEnumerable<int> passingScores = scores.Where(test);
 ```
 
 
-### [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Evens
+### [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Events
 ### [NEEDS WORK]() MVVM
 ### Async - Concept, await, async
 
