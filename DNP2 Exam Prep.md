@@ -524,14 +524,36 @@ IEnumerable<int> passingScores = scores.Where(test);
 ## [NEEDS WORK]() MVVM (Model-View-ViewModel)
 
 Design pattern used to delimitate application layers and structure your code to write maintainable, testable and extensible applications.
-
-**Model** − It simply holds the data and has nothing to do with any of the business logic. Represents the underlying data structures used in the applcation. Can represent a connection to an external source.
-
-**ViewModel** − It acts as the link/connection between the Model and View and makes stuff look pretty. Used to prepare the data for the views. Aggregation of different classes (other ViewModels) a view can bind to.
-
-**View** − It simply holds the formatted data and essentially delegates everything to the Model. Mostly XAML code that defines how the view looks and how the user interacts with it. View elements bind to Properties in the ViewModel.
-
 The key benefit is allowing true separation between the View and Model beyond achieving separation and the efficiency that you gain from having that. What that means in real terms is that when your model needs to change, it can be changed easily without the view needing to and vice-versa.
+
+**Model Responsabilities** 
+
+It is the client side data model that supports the views in the application.
+
+− It simply holds the data and has nothing to do with any of the business logic, composed with properties and variables;
+- Some of those properties may reference other model objects and create the object graph which as a whole is the model objects;
+- Model objects should raise property change notifications which in WPF means data binding;
+- The last responsibility is validation which is optional, but you can embed the validation information on the model objects by using the WPF data binding validation features via interfaces like INotifyDataErrorInfo/IDataErrorInfo;
+- Represents the underlying data structures used in the applcation. Can represent a connection to an external source;
+
+**ViewModel Responsabilities** 
+
+The main purpose and responsibilities of views is to define the structure of what the user sees on the screen. The structure can contain static and dynamic parts. The primary responsibility of the ViewModel is to provide data to the view, so that view can put that data on the screen.
+
+− It acts as the link/connection between the Model and View and makes stuff look pretty. Used to prepare the data for the views. Aggregation of different classes (other ViewModels) a view can bind to.
+- Allows the user to interact with data and change the data;
+- ViewModel should also manage any navigation logic like deciding when it is time to navigate to a different view;
+- Should be able to handle the appropriate sequencing of calls to make the right thing happen based on user or any changes on the view;
+
+**View Responsabilities** 
+
+− It simply holds the formatted data and essentially delegates everything to the Model. Mostly XAML code that defines how the view looks and how the user interacts with it. View elements bind to Properties in the ViewModel.
+- Static parts are the XAML hierarchy that defines the controls and layout of controls that a view is composed of;
+- Dynamic part is like animations or state changes that are defined as part of the View;
+- The primary goal of MVVM is that there should be no code behind in the view;
+- It's impossible that there is no code behind in the view. In view you at least need the constructor and a call to inialize the component;
+- The idea is that the event handling, action and data manipulation logic code shouldn't be in the code behind in the View;
+- There are also other kinds of code that have to go in the code behind, any code that's required to have a reference to UI element is inherently view code;
 
 **Maintainability**
 
