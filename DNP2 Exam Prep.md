@@ -9,13 +9,14 @@
 
 - [x] Delegates
 - [x] Interfaces, Idisposable interface
-- [ ] Inheritance
+- [x] Inheritance
 - [x] Generics
 - [x] Anonymous Types and Methods
 - [x] Lambda expressions
 - [x] Extension Methods
 - [x] LINQ
 - [ ] WPF - Concept, XAML, Code Behind, Routed Events
+- [ ] WCF - Concept, ABC of endpoints, Service/implementation, hosting, channels
 - [ ] MVVM
 - [x] Async - Concept, await, async
 
@@ -95,7 +96,36 @@ class ConsoleLog: ILog
 }
 ```
 
-### [NEEDS WORK]() Inheritance
+### Inheritance
+
+Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application. This also provides an opportunity to reuse the code functionality and speeds up implementation time.
+
+When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the base class, and the new class is referred to as the derived class.
+
+The idea of inheritance implements the **IS-A relationship**. For example, mammal IS A animal, dog IS-A mammal hence dog IS-A animal as well, and so on.
+
+```sh
+ class Shape {
+      public void setWidth(int w) {
+         width = w;
+      }
+      public void setHeight(int h) {
+         height = h;
+      }
+      protected int width;
+      protected int height;
+   }
+
+   // Derived class
+   class Rectangle: Shape {
+      public int getArea() { 
+         return (width * height); 
+      }
+   }
+```
+
+**Initializing Base Class** - The derived class inherits the base class member variables and member methods. Therefore the super class object should be created before the subclass is created. You can give instructions for superclass initialization in the member initialization list.
+
 ### Generics
 
 Introduced in C# 2.0, they allow us to define a class with placeholders for the type of its fields, methods, parameters, etc. Generics replace these placeholders with some specific type at compile time.
