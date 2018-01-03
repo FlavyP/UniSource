@@ -17,7 +17,7 @@
 - [x] LINQ
 - [ ] WPF - Concept, XAML, Code Behind, Routed Events
 - [ ] WCF - Concept, ABC of endpoints, Service/implementation, hosting, channels
-- [ ] MVVM
+- [x] MVVM
 - [x] Async - Concept, await, async
 
 ## Delegates
@@ -525,6 +525,9 @@ IEnumerable<int> passingScores = scores.Where(test);
 **XAML** (eXtensible Application Markup Language)
 
 - XML-based language used for declaring object graphs;
+- Most concise way to represent GUI;
+- Separates front-end and back-end;
+- Language that almost all WPF-related tools emit;
 - A declarative Language with Flow Contorl Support;
 - Objects instantiated at runtime;
 - Declares a layout of User Interface;
@@ -559,6 +562,168 @@ lgb.GradientStops.Add( new GradientStop( Colors.Yellow, 0 ) );
 lgb.GradientStops.Add( new GradientStop( Colors.Green, 1 ) );
 b.Background = lgb;
 ```
+
+**Markup extensions**:
+
+- *{}* used for markup extension;
+- *x:Key* sets a unique key for each resource in a resource dictionary;
+
+```sh
+<Grid>
+ <Grid.Resources>
+  <LinearGradientBrush x:Key="FunkyBrush">
+   <GradientStop Color="Yellow" Offset="0" />
+   <GradientStop Color="Green" Offset="1" />
+  </LinearGradientBrush>
+ </Grid.Resources>
+ <Button Background="{StaticResource FunkyBrush}">Click Me</Button>
+</Grid>
+```
+
+**Define and Reference a Resource**:
+
+- Define using *Page.Resource* with *x:Key="PageBackground"*;
+- Reference StaticResource using *="{StaticResource PageBackground}"*;
+- Reference DynamicResource using *="{DynamicResource PageBackground}"*;
+- Can define resources at various levels: **aplication scope**, **Windows or Page scope**, and **Element-level scope**;
+- C# code for *findResource*, *setResourceReference* and *Resources property*;
+
+```sh
+<Page.Resources>
+ <SolidColorBrush x:Key="MyBrush" Color="Gold"/> 
+</Page.Resources>
+
+<Style TargetType="TextBlock" x:Key="Label"> 
+ <Setter Property="Foreground" Value="{StaticResource MyBrush}"/>
+</Style> 
+```
+
+**The X: prefix:**
+```sh
+<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+x:Class="MyNamespace.MyPageCode">
+ <Button Click="ClickHandler" >Click Me!</Button>
+</Page>
+```
+
+- **x:key** sets a unique key for each resource in a ResourceDictionary;
+- **x:Class** specifies the CLR namespace and class name for the class that provides code-behind for a XAML page;
+- **x:Name** specifies a run-time object name for the instance that exists in run-time code after an object element is processed;
+- **x:Static** enables a value reference that gets a static value that is not otherwise a XAML-compatible property;
+- **x:Type** constructs a Type reference based on a type name;
+
+**The layout system:**
+
+*Layout* describes the process of measuring and arranging the members of a Panel element's Children collection then drawing them onscreen. Each time a child UIElement changes its position it has the potential to trigger a new pass by the layout system. As such, it's important to understand the events that can invoke the layout system, as unnecessary invocation can lead to poor application performance.
+
+- A child UIElement begins layout process by first having its core properties measured;
+- Sizing properties defined on FrameWorkElement are evaluated, such as Width, Height and Margin;
+- Panel specific logic is applied, such as Dock direction or stacking Orientation;
+- Content is arranged after all children have been measured;
+- Children collection is drawn to screen;
+- The process is invoked again if additional Children are added to teh collection, a Layout Transform is applied, or the Update Layout method is called;
+
+**Panel elements and Custom Layout Behaviours**
+
+- **Canvas** defines an area within which you can explicitly position child elements by coordinates relative to the Canvas area;
+- **DockPanel** defines an area within which you can arrange child elements either horizontally or vertically, relative to each other;
+- **Grid** defines a flexible grid area consisting of columns and rows;
+- **StackPanel** arranges child elements into a single line that can be oriented horizontally or vertically;
+- **VirtualizingPanel** - provides a framework for Panel elements that *virtualize* the child data collection. This is an abstract class;
+- **WrapPanel** - positions child elements in sequential position from left to right, breaking content to the next line at the edge of the containing box. Subsequent ordering happens sequentially from top to bottom or right to left, depending on the value of the Orientation property;
+
+**Events and XAML Code-Behind**
+
+- Clicking buttons;
+- Entering text;
+- Selecting lists;
+- Gaining focus;
+```sh
+<Button Click="ClickHandler" >Click Me!</Button> 
+```
+```sh
+void ClickHandler(object sender, RoutedEventArgs e)
+ {
+  Button b = e.Source as Button;
+  b.Background = Brushes.Red;
+ } 
+```
+
+**Routed Events** 
+
+- Type of event that can invoke handlers on multiple listeners in an element tree, rather than just on the object that raised the event; 
+- Routed event is a CLR event that is backed by an instance of the RoutedEvent class and is processed by the WPF event system;
+
+- Define leaf elements inside a container element (CommonClickHandler);
+- Handle leaf events at the container level;
+
+```sh
+<Border Height="50" Width="300" BorderBrush="Gray" BorderThickness="1">
+ <StackPanel Background="LightGray" Orientation="Horizontal"
+Button.Click="CommonClickHandler">
+  <Button Name="YesButton" Width="Auto" >Yes</Button>
+  <Button Name="NoButton" Width="Auto" >No</Button>
+  <Button Name="CancelButton" Width="Auto" >Cancel</Button>
+ </StackPanel>
+</Border> 
+```
+
+```sh
+private void CommonClickHandler(object sender, RoutedEventArgs e) {
+ FrameworkElement feSource = e.Source as FrameworkElement;
+ switch ( feSource.Name ) {
+  case "YesButton":
+  // do something here ...
+  break;
+  case "NoButton":
+  // do something ...
+  break;
+  case "CancelButton":
+  // do something ...
+  break; }
+ e.Handled=true;
+} 
+```
+
+**Button -> StackPanel -> Border**
+
+**WPF** is a new foundation for building Windows-based applications by using Media, Documents and Application UI. Features and capabilities: 
+
+- Page layout management;
+- Data Binding;
+- 2D and 3D graphics, Multimedia, Animations;
+- Documents and printing;
+- Security, Accessibility, Localization and Interoperability with WinForms controls;
+
+**The code-behind file contains event-handler code**
+
+**Control Templates** - built-in appearance and behavior. Behavior is defined by a predefined control class. Appearance is defined by a default ControlTemplate.
+
+- Define a <Style> for a type of control;
+ - Set the Template proeprty to a ControlTemplate;
+ - Define a ContentPresenter for the control content;
+ 
+**Triggers** define a list of setters that are executed if the specified condition is fulfilled. WPF knows three different types of triggers.
+
+- **Property Triggers** get active when a property gets a specified value;
+- **Event Triggers** get active when a specified event is fired;
+- **Data Triggers** get active when a binding expression reaches a specified value;
+
+**Data Binding**
+
+- Binding target object;
+- Binding target dependency property;
+- Binding source;
+- Path to the binding source property;
+- Binding to: Class Property, Multiple Controls to a Class, Full Object, XML Data, Another UI Element;
+
+**Data Binding Modes:**
+- OneWay;
+- TwoWay;
+- OneWayToSource;
+- OneTime;
+
 
 ## MVVM (Model-View-ViewModel)
 
