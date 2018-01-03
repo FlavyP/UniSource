@@ -521,6 +521,45 @@ IEnumerable<int> passingScores = scores.Where(test);
 
 
 ## [NEEDS WORK]() WPF - Concept, XAML, Code Behind, Routed Events
+
+**XAML** (eXtensible Application Markup Language)
+
+- XML-based language used for declaring object graphs;
+- A declarative Language with Flow Contorl Support;
+- Objects instantiated at runtime;
+- Declares a layout of User Interface;
+- Everything declared in XAML can be defined in code;
+- XAML complies to BAML (binary application markup language) for performance;
+- XAML is case sensitive;
+
+**Uses for XML elements in XAML:**
+
+- Elements representing objects;
+- Elements representing properties of objects;
+
+```sh
+<Button Content="Click Me" Click="OnButtonClick">
+ <Button.Background>
+  <LinearGradientBrush>
+   <GradientStop Color="Yellow" Offset="0" />
+   <GradientStop Color="Green" Offset="1" />
+  </LinearGradientBrush>
+ </Button.Background>
+</Button>
+```
+
+**VS**
+
+```sh
+Button b = new Button();
+b.Content = "Click Me";
+b.Click += this.OnButtonClick;
+LinearGradientBrush lgb = new LinearGradientBrush();
+lgb.GradientStops.Add( new GradientStop( Colors.Yellow, 0 ) );
+lgb.GradientStops.Add( new GradientStop( Colors.Green, 1 ) );
+b.Background = lgb;
+```
+
 ## MVVM (Model-View-ViewModel)
 
 Design pattern used to delimitate application layers and structure your code to write maintainable, testable and extensible applications.
