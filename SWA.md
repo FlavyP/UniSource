@@ -3,7 +3,17 @@
   - Explain Higher-order functions and demonstrate their use in JavaScript programming.
   - Use the relevant Array and Function methods as part of your demonstration.
 - [ ] The JavaScript object model
+  - Summarise the JavaScript object model and contrast it to object models from other languages like Java or C#
+  - Explain how ‘this’ works in JavaScript, and how to control it using bind
+  - Demonstrate the use of prototypes and constructors in creating and using JavaScript objects
 - [ ] Asynchronous programming
+Relate the following techniques for asynchronous programming
+  - Single-threaded
+  - Multi-threaded
+  - Shared memory
+  - Promises
+  - Callbacks
+  - Web Workers
 - [ ] Client/Server programming
 - [ ] Patterns of DOM programming
 - [ ] Object construction
