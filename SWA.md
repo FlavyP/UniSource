@@ -1,4 +1,7 @@
 - [ ] Functional programming in JavaScript
+  - Summarise functional programming in JavaScript.
+  - Explain Higher-order functions and demonstrate their use in JavaScript programming.
+  - Use the relevant Array and Function methods as part of your demonstration.
 - [ ] The JavaScript object model
 - [ ] Asynchronous programming
 - [ ] Client/Server programming
