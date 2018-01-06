@@ -1,3 +1,5 @@
+# Exam Topics
+
 - [ ] Functional programming in JavaScript
   - Summarise functional programming in JavaScript.
   - Explain Higher-order functions and demonstrate their use in JavaScript programming.
