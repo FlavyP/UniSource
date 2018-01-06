@@ -7,7 +7,6 @@
   - Explain how ‘this’ works in JavaScript, and how to control it using bind
   - Demonstrate the use of prototypes and constructors in creating and using JavaScript objects
 - [ ] Asynchronous programming
-Relate the following techniques for asynchronous programming
   - Single-threaded
   - Multi-threaded
   - Shared memory
@@ -15,7 +14,24 @@ Relate the following techniques for asynchronous programming
   - Callbacks
   - Web Workers
 - [ ] Client/Server programming
+  - Demonstrate client/server programming in Single-page web application
+  - Asynchronous server calls and callbacks
+  - Promises
+  - JSON
+  - Web services
 - [ ] Patterns of DOM programming
+  - Classic Model-View-Controller
+  - 1-way data flow
+  - 2-way data binding
 - [ ] Object construction
+  - Demonstrate the different ways of creating objects in JavaScript and contrast them.
+  - Compare object construction in JavaScript to other languages.
 - [ ] Object composition and inheritance
+  - Demonstrate the different ways of object composition and inheritance in JavaScript and contrast them.
+  - Compare to other languages
 - [ ] JavaScript run-time model
+  - Demonstrate how the JavaScript run-time model is used in an application
+  - Demonstrate how the following elements interact
+    - Event queue
+    - Call stack
+    - Web Workers
