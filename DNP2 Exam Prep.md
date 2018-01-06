@@ -16,7 +16,7 @@
 - [x] Extension Methods
 - [x] LINQ
 - [x] WPF - Concept, XAML, Code Behind, Routed Events
-- [ ] WCF - Concept, ABC of endpoints, Service/implementation, hosting, channels
+- [x] WCF - Concept, ABC of endpoints, Service/implementation, hosting, channels
 - [x] MVVM
 - [x] Async - Concept, await, async
 
@@ -895,7 +895,7 @@ async static void DoStuff() {
 **Working with images** - MediaCapture, BitmapEncoder, BitmapDecoder;
 **WCF programming** - Synchronous and Asynchronous Operations;
  
-## [NEEDS WORK]() WCF (Windows Communication Foundation) - Concept, ABC of Endpoints, Service/implementation, hosting, channels
+## WCF (Windows Communication Foundation) - Concept, ABC of Endpoints, Service/implementation, hosting, channels
 
 **WCF supports SOA (Service Oriented Architecture):** 
 - Developers do not have to learn WSDL;
