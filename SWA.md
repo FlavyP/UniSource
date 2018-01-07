@@ -107,6 +107,17 @@ This also means that any processing intensive tasks will end up blocking your wh
 - Make sure to close the worker thread at the end of event listener in worker;
 - Does not support cloning functions, DOM nodes and Error objects and it also won’t walk through the prototype chain and duplicate it too;
 
+**Service Worker:**
+- Background service that handles network requests. Ideal for dealing with offline situations and background syncs or push notifications. Cannot directly interact with the DOM. Communication must go through the Service Worker’s postMessage method.
+
+**Web Worker:**
+
+- Mimics multithreading, allowing intensive scripts to be run in the background so they do not block other scripts from running. Ideal for keeping your UI responsive while also performing processor-intensive functions. Cannot directly interact with the DOM. Communication must go through the Web Worker’s postMessage method.
+**WebSocket:**
+
+- Creates an open connection between a client and a server, allowing persistent two-way communication over a single connection. Ideal for any situation where you currently use long-polling such as chat apps, online games, or sports tickers. Can directly interact with the DOM. Communication is handled through the WebSocket’s send method.
+
+
 **SharedMemory**
 
 - Not many browsers support this;
