@@ -8,7 +8,7 @@
   - Summarise the JavaScript object model and contrast it to object models from other languages like Java or C#
   - Explain how ‘this’ works in JavaScript, and how to control it using bind
   - Demonstrate the use of prototypes and constructors in creating and using JavaScript objects
-- [ ] Asynchronous programming
+- [x] Asynchronous programming
   - Single-threaded
   - Multi-threaded
   - Shared memory
