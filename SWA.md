@@ -140,7 +140,7 @@ When our worker receives that shared memory we:
 
 **Promises:**
 
-A promise is an object which can be returned synchronously from an asynchronous function that may produce a value some time in the future: a resolved value or a reason that it's not resolved (error). A promise has 3 states: **pending, fulfillde, rejected**. Can attach callbacks to handle the fulfillde value or the reason for rejection. Promises are eager, meaning that a promise will start doing whatever task you give it as soon as the promise constructor is invoked.
+A promise is an object which can be returned synchronously from an asynchronous function that may produce a value some time in the future: a resolved value or a reason that it's not resolved (error). A promise has 3 states: **pending, fulfilled, rejected**. Can attach callbacks to handle the fulfilled value or the reason for rejection. Promises are eager, meaning that a promise will start doing whatever task you give it as soon as the promise constructor is invoked.
 
 Once settled, a promise can not be resettled. Calling resolve() or reject() again will have no effect. The immutability of a settled promise is an important feature.
 
@@ -156,3 +156,10 @@ fetch(url)
 ```
 Assuming each of the functions, fetch(), process(), and save() return promises, process() will wait for fetch() to complete before starting, and save() will wait for process() to complete before starting. handleErrors() will only run if any of the previous promises reject.
 
+**Promise.all** - promise for the combined result of multiple parallel-waiting promises;
+
+**Callback function** - function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Often used to continue code execution after an asynchronous operation has completed.
+
+**Async/await**:
+
+In an async function, calls return a Promise (if set so), unless marked with **await**. If marked with await, it will returned the actual result from the function since it will wait for that. When you do, the execution of the **async** function is paused until the promise is resolved.
