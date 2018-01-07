@@ -86,3 +86,44 @@ JavaScript is an object-based language based on prototypes, rather than being cl
 
 The **bind()** method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
+## Asynchronous programming
+
+JavaScript is single-threaded! One single thread handles the event loop
+
+The problem with the event loop is that if we keep pushing multiple messages to the queue and the call stack takes too long to finish running we will end up delaying processing all these messages and making our code run slowly. If we’re on browsers we can end up delaying renders and making the whole page seem slow.
+
+This also means that any processing intensive tasks will end up blocking your whole code execution because (until a while ago) we had no way of running them in a separate thread.
+
+**Web Workers** 
+
+- Scripts executed from an HTML page that runs on a background thread away from the main execution thread;
+- Data is sent between the main thread and workers through messages;
+- Utilize web workers to run process intensive tasks without creating blocking instances;
+- Need 2 separate files (main, worker) since worker needs to be run in an isolated thread;
+- Data sent between main thread and workers are **copied rather than shared** (think about memory allocation and speed of data transfer);
+- Event listener in worker.js to look out for messages from main;
+- Once the worker hears from main, it starts running the code within the function block;
+- We also need a listener in main to hear back from worker;
+- Make sure to close the worker thread at the end of event listener in worker;
+- Does not support cloning functions, DOM nodes and Error objects and it also won’t walk through the prototype chain and duplicate it too;
+
+**SharedMemory**
+
+- Not many browsers support this;
+- Sharding memory between two threads: need to use a new data structure available globally which is called SharedArrayBuffer;
+- This shared buffer is the memory itself and a typed array on top of that memory area works like a view;
+
+As the comments in the code above show, we:
+
+1. Create a Worker
+2. Create a shared memory area by using SharedArrayBuffer
+3. Create a view (TypedArray) on top of that shared memory
+4. Add 10 even numbers to our shared array
+5. Send the shared memory (not the Shared Array) to our worker
+6. Schedule a write in the 0 position of our shared memory area (represented through a TypedArray) after 5 seconds
+
+When our worker receives that shared memory we:
+
+1. When the worker receives that memory it creates a view (TypedArray) on top of that
+2. Now our worker has access to that shared memory through the TypedArray we created so we schedule it to read the first position of that TypedArray after 10 seconds (because by that time our main thread will already have changed what’s in that index)
+
