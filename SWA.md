@@ -61,6 +61,28 @@ A **callback** is a function that gets executed at the end of an operation, once
 
 **Currying** - you can pass all of the arguments a function is expecting and get the result, or pass a subset of those arguments and get a function back that’s waiting for the rest of the arguments.
 
+## The JavaScript object model
 
+JavaScript is an object-based language based on prototypes, rather than being class-based (like Java is). 
 
+**Class-based languages:**
+- Class defines all of the properties (methods and fields);
+- An instance is the instantiation of a class and has exactly the same properties of its parent class;
+- Define a class in a separate class definition. In there you define special methods, constructors etc;
+- Create a hierarchy of classes through the class definitions, specifying the new class is a subclass of an existing class;
+
+**Prototype-based languages:**
+- Simply has objects;
+- Notion of *prototypical object* - object used as a template from which to get the initial properties for a new object;
+- Any object can specify its own properties, either when you create it or at run time;
+- Any object can be associated as the *prototype* for another;
+- JS does not have a class definition separate from the constructor; You define a constructor function to create objects with a particular initial set of properties and values;
+- Any JS function can be used as a constructor;
+- You use the **new** operator with a constructor function to create a new object;
+- JS implements inheritance by allowing you to associate a *prototypical* object with any constructor function;
+- You need to call the *super classes* constructor, add new properties and assign a new object derived from *SuperClass.prototype* as the prototype for the sub class;
+- At run time you can add or remove properties of any object;
+- If you add a property to an object that is used as the prototype for a set of objects, the objects for which it is the prototype also get the new property;
+
+The **bind()** method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
 
