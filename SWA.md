@@ -4,7 +4,7 @@
   - Summarise functional programming in JavaScript.
   - Explain Higher-order functions and demonstrate their use in JavaScript programming.
   - Use the relevant Array and Function methods as part of your demonstration.
-- [ ] The JavaScript object model
+- [x] The JavaScript object model
   - Summarise the JavaScript object model and contrast it to object models from other languages like Java or C#
   - Explain how ‘this’ works in JavaScript, and how to control it using bind
   - Demonstrate the use of prototypes and constructors in creating and using JavaScript objects
