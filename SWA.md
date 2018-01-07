@@ -138,3 +138,21 @@ When our worker receives that shared memory we:
 1. When the worker receives that memory it creates a view (TypedArray) on top of that
 2. Now our worker has access to that shared memory through the TypedArray we created so we schedule it to read the first position of that TypedArray after 10 seconds (because by that time our main thread will already have changed what’s in that index)
 
+**Promises:**
+
+A promise is an object which can be returned synchronously from an asynchronous function that may produce a value some time in the future: a resolved value or a reason that it's not resolved (error). A promise has 3 states: **pending, fulfillde, rejected**. Can attach callbacks to handle the fulfillde value or the reason for rejection. Promises are eager, meaning that a promise will start doing whatever task you give it as soon as the promise constructor is invoked.
+
+Once settled, a promise can not be resettled. Calling resolve() or reject() again will have no effect. The immutability of a settled promise is an important feature.
+
+Because .then() always returns a new promise, it’s possible to chain promises with precise control over how and where errors are handled. Promises allow you to mimic normal synchronous code’s try/catch behavior.
+
+Like synchronous code, chaining will result in a sequence that runs in serial. In other words, you can do:
+```sh
+fetch(url)
+  .then(process)
+  .then(save)
+  .catch(handleErrors)
+;
+```
+Assuming each of the functions, fetch(), process(), and save() return promises, process() will wait for fetch() to complete before starting, and save() will wait for process() to complete before starting. handleErrors() will only run if any of the previous promises reject.
+
