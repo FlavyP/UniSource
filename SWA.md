@@ -164,5 +164,11 @@ Assuming each of the functions, fetch(), process(), and save() return promises, 
 
 In an async function, calls return a Promise (if set so), unless marked with **await**. If marked with await, it will returned the actual result from the function since it will wait for that. When you do, the execution of the **async** function is paused until the promise is resolved.
 
-Because Object.assign() copies the properties (including functions) from one object to another, you are increasing the memory burden. When you use prototype delegation and the this keyword you don’t duplicate the functions and properties, you delegate instead. That’s the value of prototypal inheritance, but it doesn’t mean you have to emulate classes. I’ll be exploring this in a future article.
+Because **Object.assign()** copies the properties (including functions) from one object to another, you are increasing the memory burden. When you use prototype delegation and the this keyword you don’t duplicate the functions and properties, you delegate instead. That’s the value of prototypal inheritance, but it doesn’t mean you have to emulate classes. I’ll be exploring this in a future article.
+
+In classical inheritance, we tend to think of our objects in terms of what they are, but when using object composition we think about what they can do.
+Classical inheritance is difficult to do correctly, and difficult to change later.
+Javascript provides simple tools for object composition that avoid the pitfalls of classical inheritance
+
+The **Object.create()** method creates a new object with the specified prototype object and properties.
 
