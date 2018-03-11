@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/Flavy/Documents/!work/!unity/LegoProject/Assets/Scenes/World Map.unity
+  isLoaded: 1
+  isActive: 1

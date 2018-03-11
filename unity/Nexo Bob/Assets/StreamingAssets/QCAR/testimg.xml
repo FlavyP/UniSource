@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="SDSD1" size="512.000000 512.000000" />
+    <ImageTarget name="ASDASD" size="512.000000 512.000000" />
+    <ImageTarget name="Untitled-21" size="512.000000 512.000000" />
+    <ImageTarget name="Untitled-1" size="512.000000 512.000000" />
+    <ImageTarget name="FOREST_arena" size="512.000000 512.000000" />
+    <ImageTarget name="arena" size="512.000000 512.000000" />
+    <ImageTarget name="shield5" size="1000.000000 1565.000000" />
+    <ImageTarget name="shield4" size="1000.000000 1565.000000" />
+    <ImageTarget name="shield3" size="1000.000000 1565.000000" />
+    <ImageTarget name="shield2" size="1000.000000 1565.000000" />
+    <ImageTarget name="section03_02" size="232.000000 232.000000" />
+    <ImageTarget name="shield" size="1000.000000 1565.000000" />
+    <ImageTarget name="landscape-1102117_960_720" size="960.000000 600.000000" />
+  </Tracking>
+</QCARConfig>

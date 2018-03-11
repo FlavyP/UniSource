@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 1a6b690f81a92f94aa511560e65c981b
+timeCreated: 1464159911
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 3626b
+    100002: 3878
+    100004: 970
+    100006: 971
+    100008: 972
+    100010: 973
+    100012: 981
+    100014: 982
+    100016: 983
+    100018: 983.001
+    100020: Armature
+    100022: //RootNode
+    100024: Bone
+    100026: Bone.001
+    100028: Bone.001_L
+    100030: Bone.001_L.001
+    100032: Bone.001_L.001_end
+    100034: Bone.001_R
+    100036: Bone.001_R.001
+    100038: Bone.001_R.001_end
+    100040: Bone.006
+    100042: Bone.006_end
+    100044: Bone_L.001
+    100046: Bone_L.002
+    100048: Bone_L.002_end
+    100050: Bone_R.001
+    100052: Bone_R.002
+    100054: Bone_R.002_end
+    100056: Camera
+    100058: Lamp
+    400000: 3626b
+    400002: 3878
+    400004: 970
+    400006: 971
+    400008: 972
+    400010: 973
+    400012: 981
+    400014: 982
+    400016: 983
+    400018: 983.001
+    400020: Armature
+    400022: //RootNode
+    400024: Bone
+    400026: Bone.001
+    400028: Bone.001_L
+    400030: Bone.001_L.001
+    400032: Bone.001_L.001_end
+    400034: Bone.001_R
+    400036: Bone.001_R.001
+    400038: Bone.001_R.001_end
+    400040: Bone.006
+    400042: Bone.006_end
+    400044: Bone_L.001
+    400046: Bone_L.002
+    400048: Bone_L.002_end
+    400050: Bone_R.001
+    400052: Bone_R.002
+    400054: Bone_R.002_end
+    400056: Camera
+    400058: Lamp
+    4300000: 983
+    4300002: 981
+    4300004: 973
+    4300006: 982
+    4300008: 983.001
+    4300010: 3626b
+    4300012: 970
+    4300014: 972
+    4300016: 971
+    4300018: 3878
+    7400000: Armature|Throwing
+    7400002: Armature|Walking
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: 3626b
+    13700002: 3878
+    13700004: 970
+    13700006: 971
+    13700008: 972
+    13700010: 973
+    13700012: 981
+    13700014: 982
+    13700016: 983
+    13700018: 983.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

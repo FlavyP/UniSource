@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 3138b3f78ab235740aee41aafd46e53a
+timeCreated: 1464012244
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: BI_70317_
+    100004: BI_70330_
+    100006: bLCam_sys
+    100008: bLCam_Sys_Sel_Rev
+    100010: Body
+    100012: Clay
+    100014: group1
+    100016: group10
+    100018: group11
+    100020: group12
+    100022: group2
+    100024: group3
+    100026: group4
+    100028: group5
+    100030: group6
+    100032: group9
+    100034: Head
+    100036: Hip
+    100038: left_side
+    100040: left_side 1
+    100042: LeftArm
+    100044: LeftHand
+    100046: LEGO_directionalLight1
+    100048: LEGO_directionalLight1 1
+    100050: LEGO_directionalLight1 10
+    100052: LEGO_directionalLight1 11
+    100054: LEGO_directionalLight1 12
+    100056: LEGO_directionalLight1 13
+    100058: LEGO_directionalLight1 14
+    100060: LEGO_directionalLight1 15
+    100062: LEGO_directionalLight1 2
+    100064: LEGO_directionalLight1 3
+    100066: LEGO_directionalLight1 4
+    100068: LEGO_directionalLight1 5
+    100070: LEGO_directionalLight1 6
+    100072: LEGO_directionalLight1 7
+    100074: LEGO_directionalLight1 8
+    100076: LEGO_directionalLight1 9
+    100078: LEGO_directionalLight10
+    100080: LEGO_directionalLight11
+    100082: LEGO_directionalLight12
+    100084: LEGO_directionalLight13
+    100086: LEGO_directionalLight14
+    100088: LEGO_directionalLight15
+    100090: LEGO_directionalLight16
+    100092: LEGO_directionalLight17
+    100094: LEGO_directionalLight18
+    100096: LEGO_directionalLight19
+    100098: LEGO_directionalLight2
+    100100: LEGO_directionalLight20
+    100102: LEGO_directionalLight21
+    100104: LEGO_directionalLight22
+    100106: LEGO_directionalLight23
+    100108: LEGO_directionalLight24
+    100110: LEGO_directionalLight25
+    100112: LEGO_directionalLight26
+    100114: LEGO_directionalLight27
+    100116: LEGO_directionalLight28
+    100118: LEGO_directionalLight29
+    100120: LEGO_directionalLight3
+    100122: LEGO_directionalLight30
+    100124: LEGO_directionalLight31
+    100126: LEGO_directionalLight32
+    100128: LEGO_directionalLight33
+    100130: LEGO_directionalLight34
+    100132: LEGO_directionalLight35
+    100134: LEGO_directionalLight36
+    100136: LEGO_directionalLight37
+    100138: LEGO_directionalLight38
+    100140: LEGO_directionalLight39
+    100142: LEGO_directionalLight4
+    100144: LEGO_directionalLight40
+    100146: LEGO_directionalLight41
+    100148: LEGO_directionalLight42
+    100150: LEGO_directionalLight43
+    100152: LEGO_directionalLight44
+    100154: LEGO_directionalLight45
+    100156: LEGO_directionalLight46
+    100158: LEGO_directionalLight47
+    100160: LEGO_directionalLight48
+    100162: LEGO_directionalLight49
+    100164: LEGO_directionalLight5
+    100166: LEGO_directionalLight6
+    100168: LEGO_directionalLight7
+    100170: LEGO_directionalLight8
+    100172: LEGO_directionalLight9
+    100174: LEGO_pointLight1
+    100176: LEGO_pointLight1 1
+    100178: LEGO_pointLight1 10
+    100180: LEGO_pointLight1 11
+    100182: LEGO_pointLight1 12
+    100184: LEGO_pointLight1 13
+    100186: LEGO_pointLight1 14
+    100188: LEGO_pointLight1 15
+    100190: LEGO_pointLight1 2
+    100192: LEGO_pointLight1 3
+    100194: LEGO_pointLight1 4
+    100196: LEGO_pointLight1 5
+    100198: LEGO_pointLight1 6
+    100200: LEGO_pointLight1 7
+    100202: LEGO_pointLight1 8
+    100204: LEGO_pointLight1 9
+    100206: m22380_mini_helmet_no_87_0
+    100208: m22385_flat_tile2x3_w_angle_0
+    100210: m22385_flat_tile2x3_w_angle_1
+    100212: m22385_flat_tile2x3_w_angle_2
+    100214: m22393_mini_visor_no_1_0
+    100216: m22402_armor_no_17_0
+    100218: m22408_mini_shield_no_2_0
+    100220: m30153_diamond_with_stick_0
+    100222: m3626_mini_head_no_1782_0
+    100224: m3814_MINI_UPPER_PART_0
+    100226: m3815_MINI_HIP_0
+    100228: m3816_MINI_LEG_RIGHT_0
+    100230: m3817_MINI_LEG_LEFT_0
+    100232: m3818_MINI_ARM__RIGHT_0
+    100234: m3819_MINI_ARM__LEFT_0
+    100236: m3820_MINI_HAND_0
+    100238: m3820_MINI_HAND_1
+    100240: m64567_light_sword_shaft_2
+    100242: Model
+    100244: power_on_back
+    100246: right_side
+    100248: right_side 1
+    100250: RightArm
+    100252: RightHand
+    100254: shield
+    100256: shield_power2
+    100258: spin_rotor
+    100260: spin_rotor 1
+    100262: Stand
+    100264: weapon_Clay
+    400000: //RootNode
+    400002: BI_70317_
+    400004: BI_70330_
+    400006: bLCam_sys
+    400008: bLCam_Sys_Sel_Rev
+    400010: Body
+    400012: Clay
+    400014: group1
+    400016: group10
+    400018: group11
+    400020: group12
+    400022: group2
+    400024: group3
+    400026: group4
+    400028: group5
+    400030: group6
+    400032: group9
+    400034: Head
+    400036: Hip
+    400038: left_side
+    400040: left_side 1
+    400042: LeftArm
+    400044: LeftHand
+    400046: LEGO_directionalLight1
+    400048: LEGO_directionalLight1 1
+    400050: LEGO_directionalLight1 10
+    400052: LEGO_directionalLight1 11
+    400054: LEGO_directionalLight1 12
+    400056: LEGO_directionalLight1 13
+    400058: LEGO_directionalLight1 14
+    400060: LEGO_directionalLight1 15
+    400062: LEGO_directionalLight1 2
+    400064: LEGO_directionalLight1 3
+    400066: LEGO_directionalLight1 4
+    400068: LEGO_directionalLight1 5
+    400070: LEGO_directionalLight1 6
+    400072: LEGO_directionalLight1 7
+    400074: LEGO_directionalLight1 8
+    400076: LEGO_directionalLight1 9
+    400078: LEGO_directionalLight10
+    400080: LEGO_directionalLight11
+    400082: LEGO_directionalLight12
+    400084: LEGO_directionalLight13
+    400086: LEGO_directionalLight14
+    400088: LEGO_directionalLight15
+    400090: LEGO_directionalLight16
+    400092: LEGO_directionalLight17
+    400094: LEGO_directionalLight18
+    400096: LEGO_directionalLight19
+    400098: LEGO_directionalLight2
+    400100: LEGO_directionalLight20
+    400102: LEGO_directionalLight21
+    400104: LEGO_directionalLight22
+    400106: LEGO_directionalLight23
+    400108: LEGO_directionalLight24
+    400110: LEGO_directionalLight25
+    400112: LEGO_directionalLight26
+    400114: LEGO_directionalLight27
+    400116: LEGO_directionalLight28
+    400118: LEGO_directionalLight29
+    400120: LEGO_directionalLight3
+    400122: LEGO_directionalLight30
+    400124: LEGO_directionalLight31
+    400126: LEGO_directionalLight32
+    400128: LEGO_directionalLight33
+    400130: LEGO_directionalLight34
+    400132: LEGO_directionalLight35
+    400134: LEGO_directionalLight36
+    400136: LEGO_directionalLight37
+    400138: LEGO_directionalLight38
+    400140: LEGO_directionalLight39
+    400142: LEGO_directionalLight4
+    400144: LEGO_directionalLight40
+    400146: LEGO_directionalLight41
+    400148: LEGO_directionalLight42
+    400150: LEGO_directionalLight43
+    400152: LEGO_directionalLight44
+    400154: LEGO_directionalLight45
+    400156: LEGO_directionalLight46
+    400158: LEGO_directionalLight47
+    400160: LEGO_directionalLight48
+    400162: LEGO_directionalLight49
+    400164: LEGO_directionalLight5
+    400166: LEGO_directionalLight6
+    400168: LEGO_directionalLight7
+    400170: LEGO_directionalLight8
+    400172: LEGO_directionalLight9
+    400174: LEGO_pointLight1
+    400176: LEGO_pointLight1 1
+    400178: LEGO_pointLight1 10
+    400180: LEGO_pointLight1 11
+    400182: LEGO_pointLight1 12
+    400184: LEGO_pointLight1 13
+    400186: LEGO_pointLight1 14
+    400188: LEGO_pointLight1 15
+    400190: LEGO_pointLight1 2
+    400192: LEGO_pointLight1 3
+    400194: LEGO_pointLight1 4
+    400196: LEGO_pointLight1 5
+    400198: LEGO_pointLight1 6
+    400200: LEGO_pointLight1 7
+    400202: LEGO_pointLight1 8
+    400204: LEGO_pointLight1 9
+    400206: m22380_mini_helmet_no_87_0
+    400208: m22385_flat_tile2x3_w_angle_0
+    400210: m22385_flat_tile2x3_w_angle_1
+    400212: m22385_flat_tile2x3_w_angle_2
+    400214: m22393_mini_visor_no_1_0
+    400216: m22402_armor_no_17_0
+    400218: m22408_mini_shield_no_2_0
+    400220: m30153_diamond_with_stick_0
+    400222: m3626_mini_head_no_1782_0
+    400224: m3814_MINI_UPPER_PART_0
+    400226: m3815_MINI_HIP_0
+    400228: m3816_MINI_LEG_RIGHT_0
+    400230: m3817_MINI_LEG_LEFT_0
+    400232: m3818_MINI_ARM__RIGHT_0
+    400234: m3819_MINI_ARM__LEFT_0
+    400236: m3820_MINI_HAND_0
+    400238: m3820_MINI_HAND_1
+    400240: m64567_light_sword_shaft_2
+    400242: Model
+    400244: power_on_back
+    400246: right_side
+    400248: right_side 1
+    400250: RightArm
+    400252: RightHand
+    400254: shield
+    400256: shield_power2
+    400258: spin_rotor
+    400260: spin_rotor 1
+    400262: Stand
+    400264: weapon_Clay
+    2300000: m22380_mini_helmet_no_87_0
+    2300002: m22385_flat_tile2x3_w_angle_0
+    2300004: m22385_flat_tile2x3_w_angle_1
+    2300006: m22385_flat_tile2x3_w_angle_2
+    2300008: m22393_mini_visor_no_1_0
+    2300010: m22402_armor_no_17_0
+    2300012: m22408_mini_shield_no_2_0
+    2300014: m30153_diamond_with_stick_0
+    2300016: m3626_mini_head_no_1782_0
+    2300018: m3814_MINI_UPPER_PART_0
+    2300020: m3815_MINI_HIP_0
+    2300022: m3816_MINI_LEG_RIGHT_0
+    2300024: m3817_MINI_LEG_LEFT_0
+    2300026: m3818_MINI_ARM__RIGHT_0
+    2300028: m3819_MINI_ARM__LEFT_0
+    2300030: m3820_MINI_HAND_0
+    2300032: m3820_MINI_HAND_1
+    2300034: m64567_light_sword_shaft_2
+    3300000: m22380_mini_helmet_no_87_0
+    3300002: m22385_flat_tile2x3_w_angle_0
+    3300004: m22385_flat_tile2x3_w_angle_1
+    3300006: m22385_flat_tile2x3_w_angle_2
+    3300008: m22393_mini_visor_no_1_0
+    3300010: m22402_armor_no_17_0
+    3300012: m22408_mini_shield_no_2_0
+    3300014: m30153_diamond_with_stick_0
+    3300016: m3626_mini_head_no_1782_0
+    3300018: m3814_MINI_UPPER_PART_0
+    3300020: m3815_MINI_HIP_0
+    3300022: m3816_MINI_LEG_RIGHT_0
+    3300024: m3817_MINI_LEG_LEFT_0
+    3300026: m3818_MINI_ARM__RIGHT_0
+    3300028: m3819_MINI_ARM__LEFT_0
+    3300030: m3820_MINI_HAND_0
+    3300032: m3820_MINI_HAND_1
+    3300034: m64567_light_sword_shaft_2
+    4300000: m22408_mini_shield_no_2_0
+    4300002: m22385_flat_tile2x3_w_angle_0
+    4300004: m22385_flat_tile2x3_w_angle_1
+    4300006: m22385_flat_tile2x3_w_angle_2
+    4300008: m3820_MINI_HAND_0
+    4300010: m3819_MINI_ARM__LEFT_0
+    4300012: m30153_diamond_with_stick_0
+    4300014: m64567_light_sword_shaft_2
+    4300016: m3820_MINI_HAND_1
+    4300018: m3818_MINI_ARM__RIGHT_0
+    4300020: m22380_mini_helmet_no_87_0
+    4300022: m22393_mini_visor_no_1_0
+    4300024: m3626_mini_head_no_1782_0
+    4300026: m22402_armor_no_17_0
+    4300028: m3814_MINI_UPPER_PART_0
+    4300030: m3815_MINI_HIP_0
+    4300032: m3817_MINI_LEG_LEFT_0
+    4300034: m3816_MINI_LEG_RIGHT_0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
